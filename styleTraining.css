@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+display: flex => makes the container a flexbox. The child items are displayed on a row.
+justify-content: => moves the content on the x-axis (Main axis).
+align-items: => moves content on the y-axis.
+*/
+.flex-container {
+    /* height: 400px; */
+    display: flex;
+    flex-direction: row; /* Can change the standard "row" to a column. Inverts x/y axis(changes main axis) */
+    background-color: #f4f4f4;
+
+    /* Always on the main axis */
+    /* justify-content: space-between;  */
+
+    /* Always on the cross axis */
+    /* align-items: center;  */
+
+    /* Creates a new row if you can't fit the next container in the browser. */
+    /* flex-wrap: wrap; */
+}
+
+.item {
+    /* Almost the same as width: / It's a starting witdth. */
+    /* flex-basis: 300px; */
+
+    /* Makes the items expand so that they fill the entire parent element. */
+    /* flex-grow: 1; */
+
+    /* flex: grow shrink basis; */
+    flex: 1 0 100px;
+    height: 100px;
+    background: #254de4;
+    color: #fff;
+    margin: 10px;
+
+    display: flex;
+
+    /* An example on how to center a div */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flex-shrink => the rate of shrink for the items as the window size changes.*/
+/* .item:nth-of-type(1) {
+    flex-shrink: 1;
+}
+
+.item:nth-of-type(2) {
+    flex-shrink: 2;
+}
+
+.item:nth-of-type(3) {
+    flex-shrink: 1;
+}  */
+
+/* Flex-grow => the rate of growth for the items as the window size changes.*/
+/* .item:nth-of-type(1) {
+    flex-grow: 1;
+}
+
+.item:nth-of-type(2) {
+    flex-grow: 2;
+}
+
+.item:nth-of-type(3) {
+    flex-grow: 1;
+}  */
+
+/* Custom order for items. */
+/* .item:nth-of-type(1) {
+    order: 2;
+}
+
+.item:nth-of-type(2) {
+    order: 1;
+}
+
+.item:nth-of-type(3) {
+    order: 3;
+} */
+
+/*
+align-self: => can overwrite the flexbox css for an individual item.
+*/
+/*
+.item:nth-of-type(1) {
+    align-self: start;
+}
+
+.item:nth-of-type(2) {
+    align-self: center;
+}
+*/
+/* Puts the last item(3:rd) at the bottom of the container */
+/*
+.item:nth-of-type(3) {
+    align-self: end;
+}
+*/
